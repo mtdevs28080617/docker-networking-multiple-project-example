@@ -10,6 +10,10 @@ services:
     command: go run main.go
     networks:
       - app1
+      - app_bridge
 
 networks:
   app1:
+    name: app1
+  app_bridge:
+    external: true
